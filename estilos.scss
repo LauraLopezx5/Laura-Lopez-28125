@@ -8,6 +8,10 @@ $color-integrantes:#A569BD;
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: gray;
 }
@@ -137,7 +141,7 @@ body {
     width: 50%;
     height: 30rem;
     border-radius: 20px;
-    background-image: url(../multimedia/auto.jpeg);
+    background-image: url(./multimedia/auto.jpeg);
     background-position: center;
     background-size: cover;
     display: flex;
