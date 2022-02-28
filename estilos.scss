@@ -101,7 +101,7 @@ body {
 
 .footer {
     width: 100%;
-    height: 5vh;
+    height: 6vh;
     background-color: $color-footer;
     padding-top: 3px;
 }
@@ -151,6 +151,12 @@ body {
 
 
 /* Integrantes */
+
+.integrantes__titulo{
+    font-size: 2rem;
+    margin: 20px;
+    text-align: center
+}
 
 .integrantes{
     width: 100%;
