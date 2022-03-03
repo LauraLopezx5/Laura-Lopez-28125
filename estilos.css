@@ -231,6 +231,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -238,6 +242,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-image: url("multimedia/hands-writting.jpg");
+}
+
+.formulario h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 20px;
 }
 
 .formulario form {
@@ -251,14 +261,24 @@ body {
 }
 
 .formulario label {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-.formulario input,
-textarea {
+.formulario input {
   background-color: #D0D3D4;
   border-radius: 5px;
   border: solid 3px black;
+  height: 2rem;
+}
+
+.formulario textarea {
+  background-color: #D0D3D4;
+  border-radius: 5px;
+  border: solid 3px black;
+}
+
+.formulario .enviar {
+  display: block;
 }
 
 @media only screen and (max-width: 768px) {

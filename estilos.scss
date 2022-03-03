@@ -176,30 +176,45 @@ body {
     width: 100%;
     height: 39rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: url("multimedia/hands-writting.jpg");
 }
 
+.formulario h2{
+    color: white;
+    font-size: 2rem;
+    margin: 20px;
+    
+}
+
 .formulario form {
     display: flex;
     flex-direction: column;
-    // margin: 3rem;
 }
 
 .formulario label {
-    font-size: 2rem;
+    font-size: 1.5rem;
 
 }
 
-.formulario input,
-textarea {
+.formulario input{
+    background-color: #D0D3D4;
+    border-radius: 5px;
+    border: solid 3px black;
+    height: 2rem
+}
+.formulario textarea {
     background-color: #D0D3D4;
     border-radius: 5px;
     border: solid 3px black;
 
 }
 
+.formulario .enviar{
+    display:block;
+}
 
 @media only screen and (max-width:768px) {
     .videos .container-fluid {
