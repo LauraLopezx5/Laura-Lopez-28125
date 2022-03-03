@@ -22,6 +22,9 @@ body {
 
 .videos .container-fluid {
   background-color: #343a40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .videos iframe {
@@ -35,12 +38,9 @@ body {
   text-align: center;
 }
 
-.discos {
-  -webkit-transition: all  1s;
-  transition: all  1s;
-}
-
 .contenedorDiscos {
+  background-image: url("multimedia/disco.jpg");
+  background-size: cover;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,6 +53,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .contenedorDiscos img {
@@ -71,40 +73,20 @@ body {
   text-align: center;
 }
 
-/* galeria */
-.galeria h2 {
-  font-size: 2rem;
-  margin: 20px;
-  text-align: center;
-}
-
-.contenedorGaleria {
-  background-color: #343a40;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.carousel-indicators li {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-}
-
-.carousel-inner img {
-  width: 100%;
-}
-
 /* footer */
 .footer {
   width: 100%;
-  height: 6vh;
+  height: 4rem;
   background-color: #F08080;
-  padding-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__lista {
@@ -112,13 +94,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
 }
 
 .footer__link {
   padding-right: 20px;
+}
+
+.footer a {
+  height: 32px;
+  padding: auto;
 }
 
 /* Fechas */
@@ -141,7 +125,8 @@ body {
           align-items: center;
 }
 
-.fechas__titulo, .fechas__texto-imagen {
+.fechas__titulo,
+.fechas__texto-imagen {
   font-size: 2rem;
   margin: 20px;
   text-align: center;
@@ -193,7 +178,7 @@ body {
 .integrantes__division-1 {
   margin: 1rem;
   text-align: center;
-  background-color: #9a57b5;
+  background-color: #9854b4;
   padding: 1rem;
   border-radius: 5%;
 }
@@ -201,7 +186,7 @@ body {
 .integrantes__division-2 {
   margin: 1rem;
   text-align: center;
-  background-color: #8e4aa9;
+  background-color: #8847a2;
   padding: 1rem;
   border-radius: 5%;
 }
@@ -209,7 +194,7 @@ body {
 .integrantes__division-3 {
   margin: 1rem;
   text-align: center;
-  background-color: #7f4297;
+  background-color: #763e8c;
   padding: 1rem;
   border-radius: 5%;
 }
@@ -217,7 +202,7 @@ body {
 .integrantes__division-4 {
   margin: 1rem;
   text-align: center;
-  background-color: #703b85;
+  background-color: #643477;
   padding: 1rem;
   border-radius: 5%;
 }
@@ -225,14 +210,14 @@ body {
 .integrantes__division-5 {
   margin: 1rem;
   text-align: center;
-  background-color: #613374;
+  background-color: #522b62;
   padding: 1rem;
   border-radius: 5%;
 }
 
 .integrantes__imagen {
   height: 20rem;
-  border-radius: 5%;
+  border-radius: 50%;
 }
 
 .integrantes__nombre {
@@ -252,6 +237,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url("multimedia/hands-writting.jpg");
 }
 
 .formulario form {
@@ -268,21 +254,23 @@ body {
   font-size: 2rem;
 }
 
-.formulario input, textarea {
+.formulario input,
+textarea {
   background-color: #D0D3D4;
   border-radius: 5px;
   border: solid 3px black;
 }
 
+@media only screen and (max-width: 768px) {
+  .videos .container-fluid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
-  .videos .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .videos iframe {
-    width: 550px !important;
-  }
   .contenedorGaleria .container {
     width: 800px;
   }
