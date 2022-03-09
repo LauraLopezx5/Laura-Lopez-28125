@@ -41,7 +41,8 @@ body {
 /* Discos */
 
 .discos{
-    background-color: #00b4d8;
+    background-image: url("multimedia/guitar.jpg");
+    background-attachment: fixed;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding-top: 20px;
@@ -93,7 +94,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e9c46a;
+    background-color: #aa8fd8;
 }
 
 .integrantes .banda{
@@ -162,9 +163,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("multimedia/computer.jpg");
+    background-image: url("multimedia/guitar2.jpg");
     background-size: 100vw 100vh;
     background-attachment: fixed;
+    min-height: 550px;
 }
 
 .formulario h2 {
@@ -210,9 +212,13 @@ body {
 
 .formulario .enviar {
     width: 6rem;
-    background-color: #86A8E7;
+    background-color: transparent;
     padding-left: 0;
     font-family: 'Barlow', sans-serif;
+    border: solid 2px darken(#86A8E7, 10%);
+    color:darken(#86A8E7, 10%) ;
+    transition: all 0.4s;
+    border-radius: 20px;
 }
 
 .formulario .divEnviar {
@@ -220,14 +226,15 @@ body {
 }
 
 .formulario .enviar:hover {
-    border: solid 1px white;
-    color: white;
+    border: solid 2px darken(#86A8E7, 10%);
+    color: black;
     cursor: pointer;
+    background-color: #86A8E7;
 }
 
 .formulario .enviar:active {
     background-color: darken(#86A8E7, 10%);
-    border: solid 1px white;
+    border: solid 2px darken(#86A8E7, 10%);
     color: white;
 }
 
@@ -299,5 +306,10 @@ body {
 
     .contenedorGaleria .container {
         width: 800px;
+    }
+
+    .formulario{
+        background-image: url("multimedia/guitar2-landscape.jpg");
+
     }
 }
