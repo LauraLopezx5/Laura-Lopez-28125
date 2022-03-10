@@ -14,20 +14,18 @@ html {
 }
 
 body {
-    background-color: gray;
+    background-color: black;
 }
 
 
 /* videos */
 
-.videos{
-    background-color: #ffafcc;
-}
-
 .videos h2 {
     font-size: 2rem;
     margin: 20px;
     text-align: center;
+    font-family: $fuente1;
+    color: white;
 }
 
 .videos .container-fluid {
@@ -35,7 +33,7 @@ body {
 }
 
 .videos iframe {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 /* Discos */
@@ -44,13 +42,13 @@ body {
     background-image: url("multimedia/guitar.jpg");
     background-attachment: fixed;
     margin-top: 2rem;
-    margin-bottom: 2rem;
     padding-top: 20px;
 }
 
 .discos h2 {
     font-size: 2rem;
     text-align: center;
+    font-family: $fuente1;
 }
 
 
@@ -66,10 +64,11 @@ body {
     height: 20rem;
     margin: 10px;
     border-radius: 20px;
+    box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.75);
 }
 
-.contenedorDiscos h4 {
-    color: white;
+.contenedorDiscos h4, .contenedorDiscos h5 {
+    color: black;
     text-align: center;
     font-family: $fuente1;
 }
@@ -88,8 +87,6 @@ body {
 .integrantes {
     width: 100%;
     margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,6 +116,8 @@ body {
 
 .integrantes__nombre {
     margin-bottom: 1rem;
+    font-family: $fuente1;
+    font-weight: bolder;
 }
 
 /* Fechas */
@@ -140,6 +139,16 @@ body {
     text-align: center;
 }
 
+.fechas__titulo {
+    animation: fadeInLeft;
+    animation-duration: 2s;
+}
+
+.fechas__texto-imagen{
+    animation: fadeInRight;
+    animation-duration: 2s;
+}
+
 
 
 .fechas__imagen {
@@ -152,6 +161,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.75);
 }
 
 /* Contacto */
@@ -179,7 +189,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
-    background-color: rgba($color: #000000, $alpha: 0.4);
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    backdrop-filter: blur(8px);
     padding: 1rem;
     border-radius: 5px;
     align-items: center;
@@ -261,13 +272,15 @@ body {
     font-weight: lighter;
 }
 
+
+
 @media only screen and (max-width:575px) {
     .videos .container-fluid {
         flex-direction: column;
     }
 
     .videos iframe {
-        padding: 0.2rem;
+        padding: 0 0.2rem;
     }
 
     .formulario form {

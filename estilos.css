@@ -10,18 +10,16 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: black;
 }
 
 /* videos */
-.videos {
-  background-color: #ffafcc;
-}
-
 .videos h2 {
   font-size: 2rem;
   margin: 20px;
   text-align: center;
+  font-family: "Barlow", sans-serif;
+  color: white;
 }
 
 .videos .container-fluid {
@@ -31,7 +29,7 @@ body {
 }
 
 .videos iframe {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 /* Discos */
@@ -39,13 +37,13 @@ body {
   background-image: url("multimedia/guitar.jpg");
   background-attachment: fixed;
   margin-top: 2rem;
-  margin-bottom: 2rem;
   padding-top: 20px;
 }
 
 .discos h2 {
   font-size: 2rem;
   text-align: center;
+  font-family: "Barlow", sans-serif;
 }
 
 .contenedorDiscos {
@@ -67,10 +65,12 @@ body {
   height: 20rem;
   margin: 10px;
   border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
 }
 
-.contenedorDiscos h4 {
-  color: white;
+.contenedorDiscos h4, .contenedorDiscos h5 {
+  color: black;
   text-align: center;
   font-family: "Barlow", sans-serif;
 }
@@ -85,8 +85,6 @@ body {
 .integrantes {
   width: 100%;
   margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,6 +127,8 @@ body {
 
 .integrantes__nombre {
   margin-bottom: 1rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: bolder;
 }
 
 /* Fechas */
@@ -159,6 +159,20 @@ body {
   text-align: center;
 }
 
+.fechas__titulo {
+  -webkit-animation: fadeInLeft;
+          animation: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.fechas__texto-imagen {
+  -webkit-animation: fadeInRight;
+          animation: fadeInRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
 .fechas__imagen {
   width: 50%;
   height: 30rem;
@@ -175,6 +189,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* Contacto */
@@ -215,7 +231,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   padding: 1rem;
   border-radius: 5px;
   -webkit-box-align: center;
@@ -320,7 +338,7 @@ body {
             flex-direction: column;
   }
   .videos iframe {
-    padding: 0.2rem;
+    padding: 0 0.2rem;
   }
   .formulario form {
     width: 90%;
