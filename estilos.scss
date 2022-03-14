@@ -2,6 +2,10 @@ $fondo-secciones: #343a40;
 $color-footer:#F08080;
 $color-integrantes:#A569BD;
 $fuente1: 'Barlow',sans-serif;
+$fuenteLogo:'Dancing Script', cursive;
+$fuenteTitulo: 'Sansita Swashed', cursive;
+$amarillo:rgba(245,215,85,250);
+$amarilloClaro: rgba(245,215,85,0.5);
 
 * {
     margin: 0;
@@ -14,7 +18,33 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: gray;
+}
+
+// menu
+
+.navbar{
+    background-color: $amarillo !important;
+}
+
+nav .navbar-brand{
+    font-family: $fuenteLogo;
+    font-size: 50px;
+    color: #000000 !important;
+}
+
+.nav-link{
+    color: rgba($color: #000000, $alpha: 0.5) !important;
+    transition: all 0.4s;
+    font-size: 20px;
+}
+
+.nav-link:hover{
+    color: black !important;
+}
+
+nav button{
+    color: #000000 !important;
 }
 
 
@@ -24,12 +54,14 @@ body {
     font-size: 2rem;
     margin: 20px;
     text-align: center;
-    font-family: $fuente1;
-    color: white;
+    font-family: $fuenteTitulo;
+    color: black;
 }
 
 .videos .container-fluid {
     display: flex;
+    flex-direction: column;
+    max-width: 1000px;
 }
 
 .videos iframe {
@@ -222,14 +254,16 @@ body {
 }
 
 .formulario .enviar {
-    width: 6rem;
+    width: 7rem;
     background-color: transparent;
     padding-left: 0;
-    font-family: 'Barlow', sans-serif;
-    border: solid 2px darken(#86A8E7, 10%);
-    color:darken(#86A8E7, 10%) ;
+    font-size: 18px;
+    border: solid 2px $amarillo;
+    color:$amarillo;
     transition: all 0.4s;
     border-radius: 20px;
+    height: 35px;
+    text-transform: uppercase;
 }
 
 .formulario .divEnviar {
@@ -237,16 +271,14 @@ body {
 }
 
 .formulario .enviar:hover {
-    border: solid 2px darken(#86A8E7, 10%);
     color: black;
     cursor: pointer;
-    background-color: #86A8E7;
+    background-color: $amarilloClaro;
 }
 
 .formulario .enviar:active {
-    background-color: darken(#86A8E7, 10%);
-    border: solid 2px darken(#86A8E7, 10%);
-    color: white;
+    background-color: $amarillo;
+    color: black;
 }
 
 /* footer */
@@ -270,6 +302,16 @@ body {
 
 .footer h4 {
     font-weight: lighter;
+}
+
+.footer .icon{
+    transition: all 0.4s;
+    height: 35px;
+}
+
+.footer .icon:hover{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+
 }
 
 
