@@ -1,11 +1,9 @@
-$fondo-secciones: #343a40;
-$color-footer:#F08080;
-$color-integrantes:#A569BD;
+
 $fuente1: 'Barlow',sans-serif;
 $fuenteLogo:'Dancing Script', cursive;
 $fuenteTitulo: 'Sansita Swashed', cursive;
 $amarillo:rgba(245,215,85,250);
-$amarilloClaro: rgba(245,215,85,0.5);
+$amarilloClaro: #f5d855;
 
 * {
     margin: 0;
@@ -17,9 +15,10 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: gray;
+body{
+    background-color: black;
 }
+
 
 // menu
 
@@ -30,21 +29,17 @@ body {
 nav .navbar-brand{
     font-family: $fuenteLogo;
     font-size: 50px;
-    color: #000000 !important;
+    color: black !important;
 }
 
 .nav-link{
-    color: rgba($color: #000000, $alpha: 0.5) !important;
+    color: rgba(black, $alpha: 0.7) !important;
     transition: all 0.4s;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .nav-link:hover{
     color: black !important;
-}
-
-nav button{
-    color: #000000 !important;
 }
 
 
@@ -53,9 +48,11 @@ nav button{
 .videos h2 {
     font-size: 2rem;
     margin: 20px;
-    text-align: center;
-    font-family: $fuenteTitulo;
-    color: black;
+    text-align:center;
+    font-family: $fuente1;
+    color: whitesmoke;
+    text-transform: uppercase;
+    
 }
 
 .videos .container-fluid {
@@ -64,23 +61,27 @@ nav button{
     max-width: 1000px;
 }
 
-.videos iframe {
-    padding: 0.5rem;
+.container-fluid div {
+    margin: 1rem 0;
+    border-radius: 10px;
 }
 
 /* Discos */
-
 .discos{
-    background-image: url("multimedia/guitar.jpg");
-    background-attachment: fixed;
+    
+    background-color: black;
     margin-top: 2rem;
     padding-top: 20px;
 }
 
 .discos h2 {
     font-size: 2rem;
-    text-align: center;
+    margin: 20px;
+    text-align:center;
     font-family: $fuente1;
+    color: whitesmoke;
+    text-transform: uppercase;
+    
 }
 
 
@@ -100,7 +101,7 @@ nav button{
 }
 
 .contenedorDiscos h4, .contenedorDiscos h5 {
-    color: black;
+    color: whitesmoke;
     text-align: center;
     font-family: $fuente1;
 }
@@ -110,11 +111,7 @@ nav button{
 
 /* Integrantes */
 
-.integrantes h2 {
-    font-size: 2rem;
-    margin: 20px;
-    text-align: center
-}
+
 
 .integrantes {
     width: 100%;
@@ -123,7 +120,17 @@ nav button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #aa8fd8;
+    background-color: black;
+}
+
+.integrantes h2 {
+    font-size: 2rem;
+    margin: 20px;
+    text-align:left !important;
+    font-family: $fuente1;
+    color: whitesmoke;
+    text-transform: uppercase;
+    
 }
 
 .integrantes .banda{
@@ -135,9 +142,9 @@ nav button{
 .integrantes__division {
     margin: 1rem;
     text-align: center;
-    background-color: rgba($color: #000000, $alpha: 0.4);
     padding: 1rem;
     border-radius: 5%;
+    border: $amarilloClaro solid 3px;
 }
 
 
@@ -150,6 +157,7 @@ nav button{
     margin-bottom: 1rem;
     font-family: $fuente1;
     font-weight: bolder;
+    color: $amarillo;
 }
 
 /* Fechas */
@@ -161,14 +169,20 @@ nav button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-color: gray;
 }
 
 .fechas__titulo,
 .fechas__texto-imagen {
-    font-size: 2rem;
-    margin: 20px;
-    text-align: center;
+    
+        font-size: 2rem;
+        margin: 20px;
+        text-align:center;
+        font-family: $fuente1;
+        color: black;
+        text-transform: uppercase;
+        
+    
 }
 
 .fechas__titulo {
@@ -286,7 +300,7 @@ nav button{
 .footer {
     width: 100%;
     height: 6rem;
-    background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-color:black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -302,28 +316,23 @@ nav button{
 
 .footer h4 {
     font-weight: lighter;
+    color: gray;
 }
 
 .footer .icon{
     transition: all 0.4s;
     height: 35px;
+    filter: invert(35%) sepia(7%) saturate(0%) hue-rotate(174deg) brightness(102%) contrast(82%);
 }
 
 .footer .icon:hover{
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
-
+    transform: scale(1.05);
+    filter: invert(98%) sepia(88%) saturate(1183%) hue-rotate(329deg) brightness(99%) contrast(95%);
 }
 
 
 
 @media only screen and (max-width:575px) {
-    .videos .container-fluid {
-        flex-direction: column;
-    }
-
-    .videos iframe {
-        padding: 0 0.2rem;
-    }
 
     .formulario form {
         width: 90%;

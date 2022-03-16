@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: black;
 }
 
 .navbar {
@@ -20,22 +20,18 @@ body {
 nav .navbar-brand {
   font-family: "Dancing Script", cursive;
   font-size: 50px;
-  color: #000000 !important;
+  color: black !important;
 }
 
 .nav-link {
-  color: rgba(0, 0, 0, 0.5) !important;
+  color: rgba(0, 0, 0, 0.7) !important;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .nav-link:hover {
   color: black !important;
-}
-
-nav button {
-  color: #000000 !important;
 }
 
 /* videos */
@@ -43,8 +39,9 @@ nav button {
   font-size: 2rem;
   margin: 20px;
   text-align: center;
-  font-family: "Sansita Swashed", cursive;
-  color: black;
+  font-family: "Barlow", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
 }
 
 .videos .container-fluid {
@@ -58,22 +55,25 @@ nav button {
   max-width: 1000px;
 }
 
-.videos iframe {
-  padding: 0.5rem;
+.container-fluid div {
+  margin: 1rem 0;
+  border-radius: 10px;
 }
 
 /* Discos */
 .discos {
-  background-image: url("multimedia/guitar.jpg");
-  background-attachment: fixed;
+  background-color: black;
   margin-top: 2rem;
   padding-top: 20px;
 }
 
 .discos h2 {
   font-size: 2rem;
+  margin: 20px;
   text-align: center;
   font-family: "Barlow", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
 }
 
 .contenedorDiscos {
@@ -100,18 +100,12 @@ nav button {
 }
 
 .contenedorDiscos h4, .contenedorDiscos h5 {
-  color: black;
+  color: whitesmoke;
   text-align: center;
   font-family: "Barlow", sans-serif;
 }
 
 /* Integrantes */
-.integrantes h2 {
-  font-size: 2rem;
-  margin: 20px;
-  text-align: center;
-}
-
 .integrantes {
   width: 100%;
   margin: auto;
@@ -128,7 +122,16 @@ nav button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #aa8fd8;
+  background-color: black;
+}
+
+.integrantes h2 {
+  font-size: 2rem;
+  margin: 20px;
+  text-align: left !important;
+  font-family: "Barlow", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
 }
 
 .integrantes .banda {
@@ -145,9 +148,9 @@ nav button {
 .integrantes__division {
   margin: 1rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
   padding: 1rem;
   border-radius: 5%;
+  border: #f5d855 solid 3px;
 }
 
 .integrantes__imagen {
@@ -159,6 +162,7 @@ nav button {
   margin-bottom: 1rem;
   font-family: "Barlow", sans-serif;
   font-weight: bolder;
+  color: #f5d755;
 }
 
 /* Fechas */
@@ -178,8 +182,7 @@ nav button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(#d16ba5), color-stop(#c777b9), color-stop(#ba83ca), color-stop(#aa8fd8), color-stop(#9a9ae1), color-stop(#8aa7ec), color-stop(#79b3f4), color-stop(#69bff8), color-stop(#52cffe), color-stop(#41dfff), color-stop(#46eefa), to(#5ffbf1));
-  background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-color: gray;
 }
 
 .fechas__titulo,
@@ -187,6 +190,9 @@ nav button {
   font-size: 2rem;
   margin: 20px;
   text-align: center;
+  font-family: "Barlow", sans-serif;
+  color: black;
+  text-transform: uppercase;
 }
 
 .fechas__titulo {
@@ -316,7 +322,7 @@ nav button {
 .formulario .enviar:hover {
   color: black;
   cursor: pointer;
-  background-color: rgba(245, 215, 85, 0.5);
+  background-color: #f5d855;
 }
 
 .formulario .enviar:active {
@@ -328,8 +334,7 @@ nav button {
 .footer {
   width: 100%;
   height: 6rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#d16ba5), color-stop(#c777b9), color-stop(#ba83ca), color-stop(#aa8fd8), color-stop(#9a9ae1), color-stop(#8aa7ec), color-stop(#79b3f4), color-stop(#69bff8), color-stop(#52cffe), color-stop(#41dfff), color-stop(#46eefa), to(#5ffbf1));
-  background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,29 +363,25 @@ nav button {
 
 .footer h4 {
   font-weight: lighter;
+  color: gray;
 }
 
 .footer .icon {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   height: 35px;
+  -webkit-filter: invert(35%) sepia(7%) saturate(0%) hue-rotate(174deg) brightness(102%) contrast(82%);
+          filter: invert(35%) sepia(7%) saturate(0%) hue-rotate(174deg) brightness(102%) contrast(82%);
 }
 
 .footer .icon:hover {
-  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
-          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(358deg) brightness(103%) contrast(103%);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: invert(98%) sepia(88%) saturate(1183%) hue-rotate(329deg) brightness(99%) contrast(95%);
+          filter: invert(98%) sepia(88%) saturate(1183%) hue-rotate(329deg) brightness(99%) contrast(95%);
 }
 
 @media only screen and (max-width: 575px) {
-  .videos .container-fluid {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .videos iframe {
-    padding: 0 0.2rem;
-  }
   .formulario form {
     width: 90%;
   }
